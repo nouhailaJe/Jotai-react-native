@@ -1,11 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { useEffect } from 'react';
+import { StyleSheet, TextInput, View, Text } from 'react-native';
+import { Provider } from "jotai";
+import Account from "./src/screens/Account";
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Provider>
+        <Account />
+      </Provider>
     </View>
   );
 }
